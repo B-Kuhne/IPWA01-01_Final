@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="DE">
+    <head>
+<title>Sweating Earth</title>
+
+
+<!--Importieren des Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--Importieren des CSS Frameworks materialize-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Fixiert den Footer am unteren Rand das verankern in der CSS Datei hat nicht funktioniert-->
+<style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        .brand-logo img {
+      
+            height: 75px !important;
+            margin-right: 0px !important;
+            padding: 0 !important;
+        }
+
+        .sidenav-trigger {
+          width: 60px;
+          background-color: #388e3c;
+        }
+
+        .dropdown-content li > a {
+          font-size: 12px;
+        }
+
+  
+
+
+        /* Zusätzliche CSS-Stile für das Seitenmenü */
+  @media only screen and (min-width: 300px) {
+    .dropdown-trigger {
+      width: 109px; /* Breite des Seitenmenüs */
+      z-index: 995; /* Z-Index, um über anderen Inhalten zu liegen */
+      margin-top: 1%; /* Abstand von oben */
+      height: 55px; /* Höhe des Seitenmenüs */
+      margin-left: 3px;
+      text-align:center;
+    }
+  }
+  .btn-large {
+    background-color: #388e3c;
+    padding:0px;
+  }
+
+  table {
+  border-collapse: collapse;
+  width: 70%;
+  margin-left: 15%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+.input-field {
+  margin-left: 15%;
+  width: 12%;
+  
+  
+}
+
+.card-panel {
+width: 70%;
+margin-left: 15%;
+}
+
+    </style>
+
+</head>
+
+
+
+<body>
+<header>
+  
+  <!-- Navigation Global und Verankert Schriftzug und Logo Links-->
+  <div class="navbar-fixed">
+    
+<nav>
+    <div class="nav-wrapper #388e3c green darken-2">
+        <a href="#!" class="brand-logo center"><img src="Unbenanntes_Projekt.png" alt="Logo"></a>
+        <!-- Funktion zum Kollabieren des Menüs um auf Mobilen Geräten schönere Navigation-->
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i class="medium material-icons">chevron_left</i></a>
+        <ul class="right hide-on-med-and-down">
+         <li><a href="start.html">Startseite</a></li>
+         <li><a href="aboutUS.html">Über Uns</a></li>
+         <li><a href="contact.html">Kontakt</a></li>   
+        </ul>
+      </div>
+</div>   
+
+ </div>
+</nav>
+<ul class="sidenav" id="mobile-demo">
+  <div class="navbar-fixed"></div>
+    <li><a href="start.html">Startseite</a></li>
+         <li><a href="aboutUS.html">Über Uns</a></li>
+         <li><a href="contact.html">Kontakt</a></li>
+         <li><a href="Klimawandel.html">Klimawandel</a></li>
+         <li><a href="Community.html">Community</a></li>
+         <li><a href="whocanYou.html">Was kannst du tun ?</a></li>
+
+</ul>
+
+
+
+<!--Menü wird für alle Auflösungen in einem Dropdown Button angeboten-->
+<!-- Passt sich Schriftkultur an Links-Rechts und umgekehrt-->
+<div class="dropi">
+  <div class="col s2 " id="smallScreenMenu">
+    <a class='dropdown-trigger waves-effect waves-light btn-large ' href='#' data-target='dropdown1'><i class="material-icons left">menu</i>Menü</a>
+    <ul id='dropdown1' class='dropdown-content' style="text-align: start; direction: ltr;">
+    <li><a href="Klimawandel.html"><i class="material-icons left">public</i>Klimawandel</a></li>
+    <li><a href="Community.html"><i class="material-icons left">people</i>Community</a></li>
+    <li><a href="whocanYou.html"><i class="material-icons left">nature_people</i>Was kannst du tun</a></li>
+  </ul>
+  </div>
+</div>
+
+
+
+
+
+
+        </header> 
+<main>
+  <!-- Card-Panel zum einbetten von Fließtext-->
+  <div class="card-panel center"> 
+    <h4>Wer ist Sweating Earth?</h3> 
+
+    <!-- Fließtext-Klasse -->
+    <p class="flow-text" style="font-size: medium;"> 
+      Hinter Sweating Earth steckt ein junges Internationales Team das sich dem globalen Thema des Klimawandels verschrieben hat.
+      Wir kämpfen dafür weltweit die Aufklärung und Informationen über den Klimawandel voran zu bringen, und möglichst jeden zu erreichen.
+      Unser Team spannt bereits jetzt schon ein Netz über viele Regionen weltweit, und wächst weiter an, darüber sind wir Glücklich denn es geht jeden etwas an.
+      Wir würden uns freuen wenn auch du ein Teil von uns wirst und auch du einen Beitrag im Kampf gegen die  Globale Erwärmung leistet! 
+    </p> 
+</div>
+
+
+
+<!-- Div Klassen zum Anpassen der Responsiven Ansicht verschiedener Geräte-->
+<div class="hide">Verstecken für alle Geräte</div>
+<div class="hide-on-small-only"></div>
+<div class="hide-on-med-only"></div>
+<div class="hide-on-med-and-down"></div>
+<div class="hide-on-med-and-up"></div>
+<div class="hide-on-large-only"></div>
+ 
+
+
+
+</main>
+<!-- Footer dieser soll Datenschutz und Impressum enthalten-->
+<footer class="page-footer #4caf50 green">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+      </div>
+      <div class="col l4 offset-l2 s12">
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col m5 pull-m3">
+    © 2024 Copyright CO²Company
+        </div>
+        <div class="row">
+          <div class="col m5 push-m4">
+    <a class="waves-effect waves-light grey-text text-lighten-4 right" href="Datenschutz.html">Datenschutz</a>
+    <div class="row">
+      <div class="col m5 push-m4">
+    <a class="grey-text text-lighten-4 right" href="Impressum.html">Impressum </a>
+      </div>
+          </div>
+  </div>
+  </div>
+</div>
+</footer>
+<!--JavaScript at end of body for optimized loading-->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
+
