@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="DE">
+    <head>
+<title>Sweating Earth</title>
+
+
+<!--Importieren des Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--Importieren des CSS Frameworks materialize-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+<style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        .brand-logo img {
+      
+            height: 68px !important;
+            margin-right: 0px !important;
+            padding: 0 !important;
+        }
+
+        .sidenav-trigger {
+          width: 60px;
+          background-color: #388e3c;
+        }
+
+        .dropdown-content li > a {
+          font-size: 12px;
+        }
+
+  
+
+
+        /* Zusätzliche CSS-Stile für das Seitenmenü */
+  @media only screen and (min-width: 300px) {
+    .dropdown-trigger {
+      width: 109px; /* Breite des Seitenmenüs */
+      z-index: 995; /* Z-Index, um über anderen Inhalten zu liegen */
+      margin-top: 1%; /* Abstand von oben */
+      height: 55px; /* Höhe des Seitenmenüs */
+      margin-left: 3px;
+      text-align:center;
+    }
+  }
+  .btn-large {
+    background-color: #388e3c;
+    padding:0px;
+  }
+
+  table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid grey;
+  margin-bottom: 2%;
+  
+}
+
+th, td {
+  text-align: center;
+  padding: 1px;
+  font-size: 14px;
+  
+}
+
+.table-wrapper {
+  width: 100%; /* Nimmt die volle Breite ein */
+  overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+}
+
+
+/* Stil für kleinere Bildschirme */
+@media only screen and (min-width: 300px) {
+  th, td  {
+    padding: 4px; /* Reduziere das Padding auf kleineren Bildschirmen */
+    font-size: 12px; /* Kleinere Schriftgröße für Mobilgeräte */
+   
+  
+  }
+  table {
+    font-size: 12px; /* Generell kleinere Schrift für die gesamte Tabelle */
+    
+  }
+  .btn-flat {
+    font-size: 10px;
+    white-space:break-word;
+    width: 100%;
+    display: flex;
+    
+  }
+
+  .input-field > label {
+   padding: 2px;
+   white-space: nowrap;
+   box-sizing: border-box;
+  
+  }
+
+}
+
+
+.input-field {
+  margin-left: 15%;
+  width: 15%;
+  
+  
+}
+
+.card-panel {
+width: 70%;
+margin-left: 15%;
+
+}
+
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+<header>
+  
+  <!-- Navigation Global und Verankert Schriftzug und Logo-->
+  <div class="navbar-fixed">
+    
+<nav>
+    <div class="nav-wrapper #388e3c green darken-2">
+        <a href="#!" class="brand-logo center"><img src="Unbenanntes_Projekt.png" alt="Logo"></a>
+        <!-- Funktion zum Kollabieren des Menüs um auf Mobilen Geräten schönere Navigation-->
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i class="medium material-icons">chevron_left</i></a>
+        <ul class="right hide-on-med-and-down">
+         <li><a href="FallStudie_CO2.html">Startseite</a></li>
+         <li><a href="aboutUS.html">Über Uns</a></li>
+         <li><a href="contact.html">Kontakt</a></li>   
+        </ul>
+      </div>
+</div>   
+
+ </div>
+</nav>
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="start.html">Startseite</a></li>
+         <li><a href="aboutUS.html">Über Uns</a></li>
+         <li><a href="contact.html">Kontakt</a></li>
+         <li><a href="Klimawandel.html">Klimawandel</a></li>
+         <li><a href="Community.html">Community</a></li>
+         <li><a href="whocanYou.html">Was kannst du tun ?</a></li>
+
+</ul>
+
+
+
+<!--Menü wird für alle Auflösungen in einem Dropdown Button angeboten-->
+<!-- Passt sich Schriftkultur an Links-Rechts und umgekehrt-->
+<div class="dropi">
+  <div class="col s2 " id="smallScreenMenu">
+    <a class='dropdown-trigger waves-effect waves-light btn-large ' href='#' data-target='dropdown1'><i class="material-icons left">menu</i>Menü</a>
+    <ul id='dropdown1' class='dropdown-content' style="text-align: start; direction: ltr;">
+    <li><a href="Klimawandel.html"><i class="material-icons left">public</i>Klimawandel</a></li>
+    <li><a href="Community.html"><i class="material-icons left">people</i>Community</a></li>
+    <li><a href="whocanYou.html"><i class="material-icons left">nature_people</i>Was kannst du tun</a></li>
+  </ul>
+  </div>
+</div>
+
+
+
+
+
+
+        </header> 
+<main>
+  <!-- Card-Panel zum einbetten von Fließtext-->
+  <div class="card-panel hoverable center"> 
+    <h4>Sweating Earth</h4> 
+
+    <!-- Fließtext-Klasse -->
+    <p class="flow-text" style="font-size: small;"> 
+      Klimawandel | Thema CO² | Unsere Erde 
+    </p> 
+</div>
+
+
+ <!-- Eingabefeld zum Filtern der Tabelle-->
+ <div class="Filterbar" id="Filterfield">
+<div class="input-field left">
+  <input type="text" class="active" id="Eingabe" onkeyup="filterTable()">
+          <label for="Filtern"><i class="material-icons left">filter_none</i>Filter...</label>
+</div>
+  </div>
+
+ 
+<!-- Tabelle mit Co2 Werten, diese ist auch Filterbar durch zuhilfnahme JS-->
+<div class="table-wrapper">
+<table id="Datentabelle" class=" highlight centered ">
+ 
+ <thead>
+    <tr>
+      <!--Tabellen Header kann angeklickt werden zum sortieren der Paramater-->
+        <th onclick="sortTable(0)"><a class="waves-effect waves-green btn-flat green lighten-5"><i class="material-icons left">import_export</i>Firmenname</a></th>
+        <th onclick="sortTable(1)"><a class="waves-effect waves-green btn-flat green lighten-5"><i class="material-icons left">import_export</i>Branche</a></th>
+        <th onclick="sortTable(2)"><a class="waves-effect waves-green btn-flat green lighten-5"><i class="material-icons left">import_export</i>Land</a></th>
+        <th onclick="sortTable(3)"><a class="waves-effect waves-green btn-flat green lighten-5"><i class="material-icons left">import_export</i>Tonnen CO² Jährlich</a></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Rheinmetall</td>
+      <td>Rüstungsindustrie</td>
+      <td>Deutschland</td>
+      <td>32,76</td>
+    </tr>
+    <tr>
+      <td>Porsche</td>
+      <td>Automobilindustrie</td>
+      <TD>Deutschland</TD>
+      <td>12,64</td>
+    </tr>
+    <tr>
+      <td>BASF</td>
+      <td>Chemieindustrie</td>
+      <td>Deutschland</td>
+      <td>19,98</td>
+    </tr>
+    <tr>
+      <td>Vattenfall</td>
+      <td>Energiegewinnungsindustrie</td>
+      <td>Schweden</td>
+      <td>21,44</td>
+    </tr>
+    <tr>
+      <td>TMSC</td>
+      <td>Mikrochipindustrie</td>
+      <td>Taiwan</td>
+      <td>56,21</td>
+    </tr>
+    <tr>
+      <td>Saudi Aramco</td>
+      <td>Ölindustrie</td>
+      <td>Saudi-Arabien</td>
+      <td>59,87</td>
+    </tr>
+    <tr>
+      <td>Exxon Mobil</td>
+      <td>Ölindustrie</td>
+      <td>Nordamerika</td>
+      <td>41,74</td>
+    </tr>
+    <tr>
+      <td>Gazprom</td>
+      <td>Ölindustrie</td>
+      <td>Russland</td>
+      <td>43,73</td>
+    </tr>
+    <tr>
+      <td>BP</td>
+      <td>Ölindustrie</td>
+      <td>Vereinigtes Königreich</td>
+      <td>34,02</td>
+    </tr>
+    <tr>
+      <td>Coal India</td>
+      <td>Ölindustrie</td>
+      <td>Indien</td>
+      <td>23,17</td>
+    </tr>
+  </tbody>
+</table>
+</div> 
+
+
+
+<!-- Div Klassen zum Anpassen der Responsiven Ansicht verschiedener Geräte-->
+<div class="hide">Verstecken für alle Geräte</div>
+<div class="hide-on-small-only"></div>
+<div class="hide-on-med-only"></div>
+<div class="hide-on-med-and-down"></div>
+<div class="hide-on-med-and-up"></div>
+<div class="hide-on-large-only"></div>
+ 
+
+
+
+</main>
+<!-- Footer dieser soll Datenschutz und Impressum enthalten-->
+<footer class="page-footer #4caf50 green">
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="left">
+    © 2024 Copyright CO²Company
+        </div>
+          <div class="right">
+    <a class="waves-effect waves-light grey-text text-lighten-4 right" href="Datenschutz.html">Datenschutz</a>
+    <div class="row">
+      <div class="right">
+    <a class="grey-text text-lighten-4 right" href="Impressum.html">Impressum </a>
+      </div>
+          </div>
+  </div>
+  </div>
+</div>
+</footer>
+<!--JavaScript at end of body for optimized loading-->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
+
+
+
