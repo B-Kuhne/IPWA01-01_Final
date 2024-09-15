@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<!-- Fixiert den Footer am unteren Rand das verankern in der CSS Datei hat nicht funktioniert-->
+
 <style>
         body {
             display: flex;
@@ -25,7 +25,7 @@
 
         .brand-logo img {
       
-            height: 75px !important;
+            height: 68px !important;
             margin-right: 0px !important;
             padding: 0 !important;
         }
@@ -61,17 +61,58 @@
   table {
   border-collapse: collapse;
   width: 70%;
-  margin-left: 15%;
+  margin: 0 auto;
+  border: 1px solid grey;
+  margin-bottom: 2%;
+  
 }
 
 th, td {
-  text-align: left;
-  padding: 8px;
+  text-align: center;
+  padding: 1px;
+  font-size: 14px;
+  
 }
+
+.table-wrapper {
+  width: 100%; /* Nimmt die volle Breite ein */
+  overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+}
+
+
+/* Stil für kleinere Bildschirme */
+@media only screen and (min-width: 300px) {
+  th, td  {
+    padding: 4px; /* Reduziere das Padding auf kleineren Bildschirmen */
+    font-size: 12px; /* Kleinere Schriftgröße für Mobilgeräte */
+   
+  
+  }
+  table {
+    font-size: 12px; /* Generell kleinere Schrift für die gesamte Tabelle */
+    
+  }
+  .btn-flat {
+    font-size: 10px;
+    white-space:break-word;
+    width: 100%;
+    display: flex;
+    
+  }
+
+  .input-field > label {
+   padding: 2px;
+   white-space: nowrap;
+   box-sizing: border-box;
+  
+  }
+
+}
+
 
 .input-field {
   margin-left: 15%;
-  width: 12%;
+  width: 15%;
   
   
 }
@@ -79,7 +120,10 @@ th, td {
 .card-panel {
 width: 70%;
 margin-left: 15%;
+
 }
+
+
 
     </style>
 
@@ -178,25 +222,16 @@ Telefon: (+49) 0355\65 1035 <br>
 </main>
 <!-- Footer dieser soll Datenschutz und Impressum enthalten-->
 <footer class="page-footer #4caf50 green">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-      </div>
-      <div class="col l4 offset-l2 s12">
-      </div>
-    </div>
-  </div>
   <div class="footer-copyright">
     <div class="container">
       <div class="row">
-        <div class="col m5 pull-m3">
+        <div class="left">
     © 2024 Copyright CO²Company
         </div>
-        <div class="row">
-          <div class="col m5 push-m4">
+          <div class="right">
     <a class="waves-effect waves-light grey-text text-lighten-4 right" href="Datenschutz.html">Datenschutz</a>
     <div class="row">
-      <div class="col m5 push-m4">
+      <div class="right">
     <a class="grey-text text-lighten-4 right" href="Impressum.html">Impressum </a>
       </div>
           </div>

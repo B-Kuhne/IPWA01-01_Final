@@ -134,7 +134,7 @@ margin-left: 15%;
 <body>
 <header>
   
-  <!-- Navigation Global und Verankert Schriftzug und Logo-->
+  <!-- Navigation Global und Verankert Schriftzug und Logo Links-->
   <div class="navbar-fixed">
     
 <nav>
@@ -143,7 +143,7 @@ margin-left: 15%;
         <!-- Funktion zum Kollabieren des Menüs um auf Mobilen Geräten schönere Navigation-->
         <a href="#" data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i class="medium material-icons">chevron_left</i></a>
         <ul class="right hide-on-med-and-down">
-         <li><a href="FallStudie_CO2.html">Startseite</a></li>
+         <li><a href="start.html">Startseite</a></li>
          <li><a href="aboutUS.html">Über Uns</a></li>
          <li><a href="contact.html">Kontakt</a></li>   
         </ul>
@@ -153,6 +153,7 @@ margin-left: 15%;
  </div>
 </nav>
 <ul class="sidenav" id="mobile-demo">
+  <div class="navbar-fixed"></div>
     <li><a href="start.html">Startseite</a></li>
          <li><a href="aboutUS.html">Über Uns</a></li>
          <li><a href="contact.html">Kontakt</a></li>
@@ -185,103 +186,44 @@ margin-left: 15%;
         </header> 
 <main>
   <!-- Card-Panel zum einbetten von Fließtext-->
-  <div class="card-panel hoverable center"> 
-    <h4>Sweating Earth</h4> 
+  <div class="card-panel center"> 
+    <h4>Datenschutzerklärung</h3> 
 
     <!-- Fließtext-Klasse -->
-    <p class="flow-text" style="font-size: small;"> 
-      Klimawandel | Thema CO² | Unsere Erde 
+    <p class="flow-text" style="font-size: medium;"> 
+        <br>1. Vorwort
+<br>Hier geben wir, die CO² Company GmbH, im Folgenden: „wir“, Ihnen einen Einblick darüber, welche personenbezogenen Daten wir von Ihnen erheben und in welcher Form wir sie verarbeiten, unabhängig davon, ob Sie Interessent:in, Bewerber:in oder Besucher:in unserer Webseiten sind. Des Weiteren erhalten Sie eine Übersicht über die Ihnen zustehenden Rechte nach geltendem Datenschutzrecht. Zudem nennen wir Ihnen Ansprechpartner:innen, falls Sie Fragen haben sollten.
+<br>1.1 Wer wir sind
+Als Verantwortliche im Sinne des Datenschutzes ergreifen wir, die CO² Company gGmbH
+<br>Dresdener Str. 86
+<br>10999 Berlin
+<br>E-Mail: info(at)swaeting-earth.de
+<br>Telefon: +49 30 8744 123
+<br>alle erforderlichen Maßnahmen, um den Schutz Ihrer personenbezogenen Daten zu gewährleisten.
+<br>Bei Fragen bezüglich der Datenverarbeitung in unserem Unternehmen und der Wahrnehmung Ihrer Rechte wenden Sie sich bitte an unseren Datenschutzbeauftragten.
+<br>CO² Company GmbH
+<br>Datenschutzbeauftragter
+<br>Verbrauchersec GmbH
+<br>Joseph-Thelen Allee 33
+<br>030445 Brandenburg an der Havel
+<br>Deutschland
+<br>E-Mail: CO²-C(at)Verbrauchersec(dot)com
+<br>Telefon: +49 (0)445 – 574 - 11
+ 
+<br>2. Anwendungsbereich der Datenschutzerklärung
+<br>Die Verarbeitung personenbezogener Daten bezeichnet Tätigkeiten wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung personenbezogener Daten.
+<br>Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.
+<br>In dieser Datenschutzerklärung geht es um die personenbezogenen Daten von Interessent:innen, Bewerber:innen oder Besucher:innen.
+<br>Diese Datenschutzerklärung gilt für die folgenden Webseiten.
+<br>•	Sweathing-earth.de
+
+
+    
+      
+
+       
     </p> 
 </div>
-
-
- <!-- Eingabefeld zum Filtern der Tabelle-->
- <div class="Filterbar" id="Filterfield">
-<div class="input-field left">
-  <input type="text" class="active" id="Eingabe" onkeyup="filterTable()">
-          <label for="Filtern"><i class="material-icons left">filter_none</i>Filter...</label>
-</div>
-  </div>
-
- 
-<!-- Tabelle mit Co2 Werten, diese ist auch Filterbar durch zuhilfnahme JS-->
-<div class="table-wrapper">
-<table id="Datentabelle" class=" highlight centered ">
- 
- <thead>
-    <tr>
-      <!--Tabellen Header kann angeklickt werden zum sortieren der Paramater-->
-        <th onclick="sortTable(0)"><a class="waves-effect waves-green btn-flat green lighten-5"><i class="material-icons left">import_export</i>Firmenname</a></th>
-        <th onclick="sortTable(1)"><a class="waves-effect waves-green btn-flat green lighten-5"><i class="material-icons left">import_export</i>Branche</a></th>
-        <th onclick="sortTable(2)"><a class="waves-effect waves-green btn-flat green lighten-5"><i class="material-icons left">import_export</i>Land</a></th>
-        <th onclick="sortTable(3)"><a class="waves-effect waves-green btn-flat green lighten-5"><i class="material-icons left">import_export</i>Tonnen CO² Jährlich</a></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Rheinmetall</td>
-      <td>Rüstungsindustrie</td>
-      <td>Deutschland</td>
-      <td>32,76</td>
-    </tr>
-    <tr>
-      <td>Porsche</td>
-      <td>Automobilindustrie</td>
-      <TD>Deutschland</TD>
-      <td>12,64</td>
-    </tr>
-    <tr>
-      <td>BASF</td>
-      <td>Chemieindustrie</td>
-      <td>Deutschland</td>
-      <td>19,98</td>
-    </tr>
-    <tr>
-      <td>Vattenfall</td>
-      <td>Energiegewinnungsindustrie</td>
-      <td>Schweden</td>
-      <td>21,44</td>
-    </tr>
-    <tr>
-      <td>TMSC</td>
-      <td>Mikrochipindustrie</td>
-      <td>Taiwan</td>
-      <td>56,21</td>
-    </tr>
-    <tr>
-      <td>Saudi Aramco</td>
-      <td>Ölindustrie</td>
-      <td>Saudi-Arabien</td>
-      <td>59,87</td>
-    </tr>
-    <tr>
-      <td>Exxon Mobil</td>
-      <td>Ölindustrie</td>
-      <td>Nordamerika</td>
-      <td>41,74</td>
-    </tr>
-    <tr>
-      <td>Gazprom</td>
-      <td>Ölindustrie</td>
-      <td>Russland</td>
-      <td>43,73</td>
-    </tr>
-    <tr>
-      <td>BP</td>
-      <td>Ölindustrie</td>
-      <td>Vereinigtes Königreich</td>
-      <td>34,02</td>
-    </tr>
-    <tr>
-      <td>Coal India</td>
-      <td>Ölindustrie</td>
-      <td>Indien</td>
-      <td>23,17</td>
-    </tr>
-  </tbody>
-</table>
-</div> 
 
 
 
@@ -323,6 +265,4 @@ margin-left: 15%;
 <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
-
-
 
